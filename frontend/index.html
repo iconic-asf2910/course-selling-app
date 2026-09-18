@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Selling App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Course Selling App</h1>
+
+    <section>
+        <h2>User Login</h2>
+
+        <input id="loginEmail" placeholder="Email">
+        <input id="loginPassword" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+    </section>
+
+    <section>
+        <h2>Available Courses</h2>
+
+        <button onclick="getCourses()">Load Courses</button>
+
+        <div id="courses"></div>
+    </section>
+
+    <section>
+        <h2>My Purchased Courses</h2>
+
+        <button onclick="getPurchasedCourses()">
+            View Purchased Courses
+        </button>
+
+        <div id="purchased"></div>
+    </section>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+
+    <section>
+    <h2>Admin Login</h2>
+
+    <input id="adminEmail" placeholder="Admin Email">
+    <input id="adminPassword" type="password" placeholder="Admin Password">
+
+    <button onclick="adminLogin()">Admin Login</button>
+
+    <section>
+    <h2>Admin Signup</h2>
+
+    <input id="adminSignupName" placeholder="Admin Name">
+    <input id="adminSignupEmail" placeholder="Admin Email">
+    <input id="adminSignupPassword" type="password" placeholder="Admin Password">
+
+    <button onclick="adminSignup()">Create Admin Account</button>
+</section>
+
+    <section>
+    <h2>Create Course</h2>
+
+    <input id="courseTitle" placeholder="Course Title">
+    <input id="courseDescription" placeholder="Course Description">
+    <input id="coursePrice" type="number" placeholder="Price">
+
+    <button onclick="createCourse()">Create Course</button>
+</section>
+</section>
+
+
+</body>
+</html>
