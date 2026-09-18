@@ -79,9 +79,13 @@ func main() {
 		w.Write([]byte("Course Selling API"))
 	})
 
-	fmt.Println("Server running on :8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 
-	err = http.ListenAndServe(":8080", middleware.CORS(http.DefaultServeMux))
+	fmt.Println("Server running on :" + port)
+	err = http.ListenAndServe("0.0.0.0:"+port, middleware.CORS(http.DefaultServeMux))
 
 	if err != nil {
 		log.Fatal(err)

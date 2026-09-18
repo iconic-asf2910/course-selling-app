@@ -1,4 +1,4 @@
-const API = "http://localhost:8080";
+const API = window.location.origin;
 
 let userToken = "";
 
