@@ -75,9 +75,7 @@ func main() {
 		),
 	)
 
-	http.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Course Selling API"))
-	})
+	http.Handle("/", http.FileServer(http.Dir("./frontend")))
 
 	port := os.Getenv("PORT")
 	if port == "" {
